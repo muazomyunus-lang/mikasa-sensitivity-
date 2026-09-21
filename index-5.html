@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MIKASA RED SENSI</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 50% 0%, #087cff 0%, #063b78 30%, #03152e 65%, #01050d 100%);
+}
+
+.container {
+    width: 92%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 25px 0 45px;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: 900;
+    color: #ff1e1e;
+    text-shadow:
+        0 0 8px #ff0000,
+        0 0 18px rgba(255, 0, 0, 0.7);
+}
+
+.subtitle {
+    margin-top: 8px;
+    color: #d9eaff;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* CARD */
+
+.card {
+    background: rgba(3, 10, 24, 0.95);
+    border: 1px solid #087cff;
+    border-radius: 18px;
+    padding: 21px;
+    margin-bottom: 20px;
+    box-shadow:
+        0 0 25px rgba(0, 110, 255, 0.25),
+        inset 0 0 20px rgba(0, 100, 255, 0.05);
+}
+
+/* LABELS */
+
+label {
+    display: block;
+    margin: 15px 0 8px;
+    color: #ff3333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* SELECT */
+
+select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #28608f;
+    outline: none;
+    background: #061326;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+select:focus {
+    border-color: #ff2020;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.35);
+}
+
+/* BUTTON */
+
+.generate-button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #a90000, #ff1717);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.35);
+}
+
+.generate-button:hover {
+    filter: brightness(1.12);
+}
+
+.generate-button:active {
+    transform: scale(0.98);
+}
+
+/* RESULT */
+
+#result {
+    display: none;
+}
+
+.result-title {
+    text-align: center;
+    color: #ff2525;
+    font-size: 25px;
+    font-weight: 900;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+.device-info {
+    text-align: center;
+    color: #b9d8ff;
+    margin: 9px 0 18px;
+    font-size: 14px;
+}
+
+/* SETTINGS */
+
+.setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #061326;
+    border: 1px solid #173c62;
+    border-radius: 9px;
+    padding: 13px;
+    margin: 8px 0;
+}
+
+.setting-name {
+    color: #eeeeee;
+}
+
+.setting-value {
+    color: #ff3030;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* COPY BUTTON */
+
+.copy-button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #07101d;
+    border: 1px solid #ff2020;
+    color: #ff3030;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background: #160606;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    color: #a6c1df;
+    font-size: 12px;
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="logo">
+            🔴 MIKASA RED SENSI
+        </div>
+
+        <div class="subtitle">
+            FREE FIRE SENSITIVITY GENERATOR
+        </div>
+
+    </div>
+
+
+    <!-- INPUT CARD -->
+
+    <div class="card">
+
+        <label for="phone">
+            📱 SELECT YOUR PHONE
+        </label>
+
+        <select id="phone">
+
+            <option value="">
+                -- Select Phone --
+            </option>
+
+            <!-- SAMSUNG -->
+
+            <option value="Samsung A05">
+                Samsung A05
+            </option>
+
+            <option value="Samsung A15">
+                Samsung A15
+            </option>
+
+            <option value="Samsung A25 5G">
+                Samsung A25 5G
+            </option>
+
+            <option value="Samsung A35 5G">
+                Samsung A35 5G
+            </option>
+
+            <option value="Samsung A55 5G">
+                Samsung A55 5G
+            </option>
+
+
+            <!-- REDMI -->
+
+            <option value="Redmi 10A">
+                Redmi 10A
+            </option>
+
+            <option value="Redmi A3">
+                Redmi A3
+            </option>
+
+            <option value="Redmi 13C">
+                Redmi 13C
+            </option>
+
+            <option value="Redmi Note 13">
+                Redmi Note 13
+            </option>
+
+
+            <!-- INFINIX -->
+
+            <option value="Infinix Hot 30">
+                Infinix Hot 30
+            </option>
+
+            <option value="Infinix Hot 40">
+                Infinix Hot 40
+            </option>
+
+            <option value="Infinix Hot 50">
+                Infinix Hot 50
+            </option>
+
+            <option value="Infinix Smart 8">
+                Infinix Smart 8
+            </option>
+
+
+            <!-- TECNO -->
+
+            <option value="Tecno Spark 10">
+                Tecno Spark 10
+            </option>
+
+            <option value="Tecno Spark 20">
+                Tecno Spark 20
+            </option>
+
+            <option value="Tecno Spark 30">
+                Tecno Spark 30
+            </option>
+
+            <option value="Tecno Camon 20">
+                Tecno Camon 20
+            </option>
+
+
+            <!-- ITEL -->
+
+            <option value="Itel A60">
+                Itel A60
+            </option>
+
+            <option value="Itel A70">
+                Itel A70
+            </option>
+
+            <option value="Itel A100C">
+                Itel A100C
+            </option>
+
+
+            <!-- IPHONE -->
+
+            <option value="iPhone 11">
+                iPhone 11
+            </option>
+
+            <option value="iPhone 12">
+                iPhone 12
+            </option>
+
+            <option value="iPhone 13">
+                iPhone 13
+            </option>
+
+            <option value="iPhone 14">
+                iPhone 14
+            </option>
+
+            <option value="iPhone 15">
+                iPhone 15
+            </option>
+
+        </select>
+
+
+        <label for="ram">
+            🧠 SELECT YOUR RAM
+        </label>
+
+        <select id="ram">
+
+            <option value="">
+                -- Select RAM --
+            </option>
+
+            <option value="2">
+                2 GB RAM
+            </option>
+
+            <option value="4">
+                4 GB RAM
+            </option>
+
+            <option value="6">
+                6 GB RAM
+            </option>
+
+            <option value="8">
+                8 GB RAM
+            </option>
+
+            <option value="12">
+                12 GB RAM
+            </option>
+
+        </select>
+
+
+        <button
+            class="generate-button"
+            onclick="generateSensi()"
+        >
+            🔥 GENERATE MIKASA SENSI
+        </button>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div class="card" id="result">
+
+        <div class="result-title">
+            🔴 MIKASA RED SENSI
+        </div>
+
+        <div
+            class="device-info"
+            id="deviceInfo"
+        ></div>
+
+
+        <div class="setting">
+
+            <span class="setting-name">
+                General
+            </span>
+
+            <span
+                class="setting-value"
+                id="general"
+            ></span>
+
+        </div>
+
+
+        <div class="setting">
+
+            <span class="setting-name">
+                Red Dot
+            </span>
+
+            <span
+                class="setting-value"
+                id="redDot"
+            ></span>
+
+        </div>
+
+
+        <div class="setting">
+
+            <span class="setting-name">
+                2× Scope
+            </span>
+
+            <span
+                class="setting-value"
+                id="scope2"
+            ></span>
+
+        </div>
+
+
+        <div class="setting">
+
+            <span class="setting-name">
+                4× Scope
+            </span>
+
+            <span
+                class="setting-value"
+                id="scope4"
+            ></span>
+
+        </div>
+
+
+        <div class="setting">
+
+            <span class="setting-name">
+                Sniper Scope
+            </span>
+
+            <span
+                class="setting-value"
+                id="sniper"
+            ></span>
+
+        </div>
+
+
+        <div class="setting">
+
+            <span class="setting-name">
+                Free Look
+            </span>
+
+            <span class="setting-value">
+                25
+            </span>
+
+        </div>
+
+
+        <!-- DPI IS HIDDEN AUTOMATICALLY FOR IPHONE -->
+
+        <div
+            class="setting"
+            id="dpiRow"
+        >
+
+            <span class="setting-name">
+                DPI
+            </span>
+
+            <span
+                class="setting-value"
+                id="dpi"
+            ></span>
+
+        </div>
+
+
+        <div class="setting">
+
+            <span class="setting-name">
+                Fire Button
+            </span>
+
+            <span
+                class="setting-value"
+                id="fireButton"
+            ></span>
+
+        </div>
+
+
+        <button
+            class="copy-button"
+            onclick="copySettings()"
+        >
+            📋 COPY SETTINGS
+        </button>
+
+    </div>
+
+
+    <div class="footer">
+        MIKASA RED SENSI • Device Preset Generator
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================================
+   MIKASA RED SENSI GENERATOR
+========================================= */
+
+function generateSensi() {
+
+    var phone =
+        document.getElementById("phone").value;
+
+    var ram =
+        document.getElementById("ram").value;
+
+
+    /* CHECK USER INPUT */
+
+    if (phone === "" || ram === "") {
+
+        alert(
+            "Please select your phone and RAM first!"
+        );
+
+        return;
+    }
+
+
+    /* =========================================
+       RAM BASE VALUES
+    ========================================= */
+
+    var base;
+
+
+    if (ram === "2") {
+
+        base = 160;
+
+    } else if (ram === "4") {
+
+        base = 170;
+
+    } else if (ram === "6") {
+
+        base = 178;
+
+    } else if (ram === "8") {
+
+        base = 184;
+
+    } else if (ram === "12") {
+
+        base = 190;
+
+    }
+
+
+    /* =========================================
+       PHONE ADJUSTMENTS
+    ========================================= */
+
+    if (phone.indexOf("Samsung") !== -1) {
+
+        base += 1;
+
+    }
+
+
+    if (phone.indexOf("Redmi") !== -1) {
+
+        base += 3;
+
+    }
+
+
+    if (phone.indexOf("Infinix") !== -1) {
+
+        base += 2;
+
+    }
+
+
+    if (phone.indexOf("Tecno") !== -1) {
+
+        base += 2;
+
+    }
+
+
+    if (phone.indexOf("Itel") !== -1) {
+
+        base -= 4;
+
+    }
+
+
+    /* =========================================
+       IPHONE DETECTION
+    ========================================= */
+
+    var isIphone =
+        phone.toLowerCase().indexOf("iphone") !== -1;
+
+
+    if (isIphone) {
+
+        base += 3;
+
+    }
+
+
+    /* =========================================
+       KEEP VALUES BETWEEN 0 AND 200
+    ========================================= */
+
+    if (base > 200) {
+
+        base = 200;
+
+    }
+
+
+    if (base < 0) {
+
+        base = 0;
+
+    }
+
+
+    /* =========================================
+       SENSITIVITY VALUES
+    ========================================= */
+
+    var general =
+        base;
+
+    var redDot =
+        Math.max(0, base - 6);
+
+    var scope2 =
+        Math.max(0, base - 18);
+
+    var scope4 =
+        Math.max(0, base - 30);
+
+    var sniper;
+
+
+    if (isIphone) {
+
+        sniper = 94;
+
+    } else {
+
+        sniper =
+            Math.max(0, base - 75);
+
+    }
+
+
+    /* =========================================
+       SHOW DEVICE INFORMATION
+    ========================================= */
+
+    document.getElementById(
+        "deviceInfo"
+    ).textContent =
+        "📱 " +
+        phone +
+        " • 🧠 " +
+        ram +
+        "GB RAM";
+
+
+    /* =========================================
+       PUT VALUES ON SCREEN
+    ========================================= */
+
+    document.getElementById(
+        "general"
+    ).textContent =
+        general;
+
+
+    document.getElementById(
+        "redDot"
+    ).textContent =
+        redDot;
+
+
+    document.getElementById(
+        "scope2"
+    ).textContent =
+        scope2;
+
+
+    document.getElementById(
+        "scope4"
+    ).textContent =
+        scope4;
+
+
+    document.getElementById(
+        "sniper"
+    ).textContent =
+        sniper;
+
+
+    /* =========================================
+       FIRE BUTTON
+    ========================================= */
+
+    if (isIphone) {
+
+        document.getElementById(
+            "fireButton"
+        ).textContent =
+            "45%";
+
+    } else {
+
+        document.getElementById(
+            "fireButton"
+        ).textContent =
+            "47%";
+
+    }
+
+
+    /* =========================================
+       DPI
+       IPHONE = NO DPI
+    ========================================= */
+
+    var dpiRow =
+        document.getElementById("dpiRow");
+
+
+    if (isIphone) {
+
+        dpiRow.style.display =
+            "none";
+
+    } else {
+
+        var dpi;
+
+
+        if (ram === "2") {
+
+            dpi = 420;
+
+        } else if (ram === "4") {
+
+            dpi = 440;
+
+        } else if (ram === "6") {
+
+            dpi = 460;
+
+        } else if (ram === "8") {
+
+            dpi = 480;
+
+        } else {
+
+            dpi = 500;
+
+        }
+
+
+        document.getElementById(
+            "dpi"
+        ).textContent =
+            dpi;
+
+
+        dpiRow.style.display =
+            "flex";
+
+    }
+
+
+    /* =========================================
+       SHOW RESULT
+    ========================================= */
+
+    document.getElementById(
+        "result"
+    ).style.display =
+        "block";
+
+
+    /* SCROLL TO RESULT */
+
+    document.getElementById(
+        "result"
+    ).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+
+/* =========================================
+   COPY SETTINGS
+========================================= */
+
+function copySettings() {
+
+    var phone =
+        document.getElementById("phone").value;
+
+    var ram =
+        document.getElementById("ram").value;
+
+
+    var text =
+        "🔴 MIKASA RED SENSI\n\n" +
+
+        "📱 Phone: " +
+        phone +
+        "\n" +
+
+        "🧠 RAM: " +
+        ram +
+        "GB\n\n" +
+
+        "General: " +
+        document.getElementById(
+            "general"
+        ).textContent +
+        "\n" +
+
+        "Red Dot: " +
+        document.getElementById(
+            "redDot"
+        ).textContent +
+        "\n" +
+
+        "2× Scope: " +
+        document.getElementById(
+            "scope2"
+        ).textContent +
+        "\n" +
+
+        "4× Scope: " +
+        document.getElementById(
+            "scope4"
+        ).textContent +
+        "\n" +
+
+        "Sniper: " +
+        document.getElementById(
+            "sniper"
+        ).textContent +
+        "\n" +
+
+        "Free Look: 25\n";
+
+
+    /* =========================================
+       ADD DPI ONLY FOR ANDROID
+    ========================================= */
+
+    var dpiRow =
+        document.getElementById("dpiRow");
+
+
+    if (
+        dpiRow.style.display !== "none"
+    ) {
+
+        text +=
+            "DPI: " +
+            document.getElementById(
+                "dpi"
+            ).textContent +
+            "\n";
+
+    }
+
+
+    text +=
+        "Fire Button: " +
+        document.getElementById(
+            "fireButton"
+        ).textContent;
+
+
+    /* =========================================
+       COPY TO CLIPBOARD
+    ========================================= */
+
+    if (
+        navigator.clipboard &&
+        navigator.clipboard.writeText
+    ) {
+
+        navigator.clipboard
+            .writeText(text)
+            .then(function() {
+
+                alert(
+                    "MIKASA RED SENSI copied! 🔥"
+                );
+
+            })
+            .catch(function() {
+
+                alert(
+                    "Copy failed. Please copy manually."
+                );
+
+            });
+
+    } else {
+
+        alert(
+            "Copy is not supported by this browser."
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
